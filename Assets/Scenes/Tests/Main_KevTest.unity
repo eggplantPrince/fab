@@ -4268,6 +4268,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human
       objectReference: {fileID: 0}
+    - target: {fileID: 6346486508450939864, guid: d25db98efd1654c3ca84af01c006a13d,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346486508450939864, guid: d25db98efd1654c3ca84af01c006a13d,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6369888712172347101, guid: d25db98efd1654c3ca84af01c006a13d,
         type: 3}
       propertyPath: m_LocalPosition.x
