@@ -166,6 +166,12 @@ namespace Invector.vCharacterController
                 animator.CrossFadeInFixedTime("Jump", 0.1f);
             else
                 animator.CrossFadeInFixedTime("JumpMove", .2f);
+
+            // end grab if jumping
+            if (isGrabbing)
+            {
+                Grab();
+            }
         }
     }
 }
