@@ -147,3 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5158790141673382549}
+  meshRenderer: {fileID: 7104328144847529818}
+  type:
+    typeName: 
+    material: {fileID: 0}

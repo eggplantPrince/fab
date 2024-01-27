@@ -17,8 +17,11 @@ public class SphereSpawn : MonoBehaviour
 
     public float maxRandomForce = 3f;
 
+    public SphereTypesMap sphereTypes;
+
     void Start() {
         StartCoroutine(SpawnTimer());
+
     }
 
     private IEnumerator SpawnTimer() {
@@ -26,7 +29,11 @@ public class SphereSpawn : MonoBehaviour
         yield return new WaitForSeconds(duration);
         GameObject spawnedSphere = Instantiate(sphere, transform.position, Quaternion.identity);
         float randomForce = Random.Range(minRandomForce,maxRandomForce);
-        spawnedSphere.GetComponent<Rigidbody>().AddForce(transform.right * (randomForce + spawnForce), ForceMode.Impulse);
+
+        SphereComponent sphereComponent = spawnedSphere.GetComponent<SphereComponent>();
+
+        sphereComponent.SetSphereType(sphereTypes.typeList[Random.Range(0,sphereTypes.typeList.Length)]);
+        sphereComponent.rb.AddForce(transform.right * (randomForce + spawnForce), ForceMode.Impulse);
         StartCoroutine(SpawnTimer());
     }
 

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1d8686625ff41deb968a3d640abc1b, type: 3}
+  m_Name: sphereTypes
+  m_EditorClassIdentifier: 
+  typeList:
+  - typeName: blue
+    material: {fileID: 2100000, guid: 69b11e2c69c13477aa280fc96660832d, type: 2}
+  - typeName: yellow
+    material: {fileID: 2100000, guid: 8c30ce56a6fa2454b9a181173d4223ff, type: 2}
+  - typeName: green
+    material: {fileID: 2100000, guid: bfb8a6d54dd6942fc8de145df27b9913, type: 2}

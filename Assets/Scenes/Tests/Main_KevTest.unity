@@ -2875,6 +2875,7 @@ MonoBehaviour:
   spawnForce: 5
   minRandomForce: -1
   maxRandomForce: 3
+  sphereTypes: {fileID: 11400000, guid: b1071c195cfe0464187b51915f337ac6, type: 2}
 --- !u!4 &1470947032
 Transform:
   m_ObjectHideFlags: 0
@@ -4269,6 +4270,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226857420860691359, guid: 6152b2ec78b3240f993c31121491a59d,
+        type: 3}
+      propertyPath: OrientationMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226857420860691359, guid: 6152b2ec78b3240f993c31121491a59d,
+        type: 3}
+      propertyPath: BonusOrientationMethod
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6830389286353117886, guid: 6152b2ec78b3240f993c31121491a59d,
         type: 3}
