@@ -20,19 +20,19 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 233325792}
   - component: {fileID: 233325791}
   - component: {fileID: 233325794}
+  - component: {fileID: 233325795}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -448,11 +449,11 @@ Transform:
   m_GameObject: {fileID: 233325790}
   serializedVersion: 2
   m_LocalRotation: {x: 0.050295904, y: -0, z: -0, w: 0.99873435}
-  m_LocalPosition: {x: -0.5560776, y: 0.56, z: 9.27}
+  m_LocalPosition: {x: 0, y: 6.11, z: -4.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1176937150}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 5.766, y: 0, z: 0}
 --- !u!114 &233325794
 MonoBehaviour:
@@ -498,6 +499,21 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &233325795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233325790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a96022fb4e8449509c25a9761e0bbda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  littleGuy: {fileID: 677380777}
+  bigGuy: {fileID: 658550505}
+  smoothSpeed: 1
 --- !u!1 &321338126
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,6 +683,43 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &658550504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658550505}
+  m_Layer: 0
+  m_Name: Big Guy Target for Cam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &658550505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658550504}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 8.8, z: 26.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &677380777 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 754231713412103496, guid: 6152b2ec78b3240f993c31121491a59d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6296827830312787804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &682210682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1290,6 @@ Transform:
   - {fileID: 1470947032}
   - {fileID: 1022757039}
   - {fileID: 1731288211}
-  - {fileID: 233325793}
   - {fileID: 726442625}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2146,3 +2198,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1176937150}
+  - {fileID: 658550505}
+  - {fileID: 233325793}
