@@ -7,6 +7,7 @@ namespace Invector.vCharacterController
         public Transform holdTarget;
 
         public SphereComponent grabbedObject;
+        public PickUpSphere pickUpSphere;
 
         public float throwForce = 5f;
 
@@ -121,15 +122,13 @@ namespace Invector.vCharacterController
             if (isGrabbing)
             {
                 Debug.Log("i grab");
-                RaycastHit hit;
-                int layerMask = 1 << 8;
-                Vector3 startPos = transform.position;
-                startPos.y += 1f;
 
-                if(Physics.SphereCast(startPos, 1f, transform.forward, out hit, 1f, layerMask))
+                Debug.Log($"has grabbable: {pickUpSphere.HasGrabbable()}");
+                if(pickUpSphere.HasGrabbable())
                 {
                     Debug.Log("got smth");
-                    grabbedObject = hit.transform.gameObject.GetComponent<SphereComponent>();
+                    grabbedObject = pickUpSphere.Grab();
+                    Debug.Log($"sphere: {pickUpSphere.Grab()}");
                     grabbedObject.GetGrabbed();
                     Vector3 newPos = holdTarget.transform.position;
                     newPos.y += .5f;

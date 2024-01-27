@@ -1175,6 +1175,7 @@ MonoBehaviour:
   minInterval: 0.1
   maxInterval: 4
   maxNumber: 0
+  pickUpSphere: {fileID: 6296827830312787805}
   spawnForce: 0
   minRandomForce: -3
   maxRandomForce: 3
@@ -1555,6 +1556,7 @@ MonoBehaviour:
   minInterval: 0.1
   maxInterval: 4
   maxNumber: 0
+  pickUpSphere: {fileID: 6296827830312787805}
   spawnForce: 0
   minRandomForce: -3
   maxRandomForce: 3
@@ -2153,11 +2155,21 @@ PrefabInstance:
       propertyPath: BonusOrientationMethod
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5544698328440903062, guid: 6152b2ec78b3240f993c31121491a59d,
+        type: 3}
+      propertyPath: distance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6830389286353117886, guid: 6152b2ec78b3240f993c31121491a59d,
         type: 3}
       propertyPath: Camera
       value: 
       objectReference: {fileID: 233325792}
+    - target: {fileID: 8138217807999426033, guid: 6152b2ec78b3240f993c31121491a59d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.61
+      objectReference: {fileID: 0}
     - target: {fileID: 8556758333780159338, guid: 6152b2ec78b3240f993c31121491a59d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2217,6 +2229,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 993402288}
   m_SourcePrefab: {fileID: 100100000, guid: 6152b2ec78b3240f993c31121491a59d, type: 3}
+--- !u!114 &6296827830312787805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5544698328440903062, guid: 6152b2ec78b3240f993c31121491a59d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6296827830312787804}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fa57e4b12e44e3d893da01c44f73eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
