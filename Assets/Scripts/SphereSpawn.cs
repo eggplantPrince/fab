@@ -20,7 +20,7 @@ public class SphereSpawn : MonoBehaviour
         yield return new WaitForSeconds(duration);
         float x = Random.Range(-10f, 10f);
         float z = Random.Range(-10f, 10f);
-        Instantiate(sphere, new Vector3(x, 20, z), Quaternion.identity);
+        Instantiate(sphere, new Vector3(x, 19f, z), Quaternion.identity);
         StartCoroutine(SpawnTimer());
     }
 
