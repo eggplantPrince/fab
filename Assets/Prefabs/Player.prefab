@@ -1935,7 +1935,6 @@ GameObject:
   m_Component:
   - component: {fileID: 754231713412103496}
   - component: {fileID: 3971566039881174761}
-  - component: {fileID: 754231713412103497}
   - component: {fileID: 754231713412103498}
   - component: {fileID: 754231713412103499}
   - component: {fileID: 754231713412103500}
@@ -1985,27 +1984,6 @@ MonoBehaviour:
     \n- Slide Slopes\n- Powerful Events\n- Debug Window\n- Crouch\n- Roll\n- And
     much more..."
   inEdit: 0
---- !u!95 &754231713412103497
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754231713412103502}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: a8be4db5759594a778debb3b12728faf, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4bba62fe41159497c9f6b4269c314d98, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &754231713412103498
 MonoBehaviour:
   m_ObjectHideFlags: 0
