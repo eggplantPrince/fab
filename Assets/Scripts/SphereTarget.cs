@@ -7,7 +7,7 @@ public class SphereTarget : MonoBehaviour {
     private float minInterval;
     [SerializeField]
     private float maxInterval;
-    private List<Sphere> spheres;
+    private List<Sphere> spheres = new List<Sphere>();
 
     void OnTriggerEnter(Collider other) {
         Sphere sphere = other.GetComponent<Sphere>();
