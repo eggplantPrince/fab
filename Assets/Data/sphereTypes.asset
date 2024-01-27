@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: sphereTypes
   m_EditorClassIdentifier: 
   typeList:
-  - typeName: blue
-    material: {fileID: 2100000, guid: 69b11e2c69c13477aa280fc96660832d, type: 2}
-  - typeName: yellow
-    material: {fileID: 2100000, guid: 8c30ce56a6fa2454b9a181173d4223ff, type: 2}
-  - typeName: green
-    material: {fileID: 2100000, guid: bfb8a6d54dd6942fc8de145df27b9913, type: 2}
+  - {fileID: 11400000, guid: 059ec720f1a624acca1cc4c3166edd97, type: 2}
+  - {fileID: 11400000, guid: 498a7ceb0db1547d08975ff481a7ffaf, type: 2}
+  - {fileID: 11400000, guid: cd03db4ce65c74e9eae0ea7f5fa0174c, type: 2}

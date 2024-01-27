@@ -14,7 +14,12 @@ public class GameControllerBehaviour : MonoBehaviour
     {
         foreach (SphereTypeEntry likedType in levels[currentLevel].likes)
         {
-            
+            if(likedType == sphere.type)
+            {
+                progress.value += progressModifier;
+                break;
+            }
         }
+        //foreach (SphereTypeEntry hateType in levels[currentLevel])
     }
 }
