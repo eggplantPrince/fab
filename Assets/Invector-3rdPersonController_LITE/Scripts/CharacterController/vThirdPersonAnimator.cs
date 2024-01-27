@@ -45,6 +45,11 @@ namespace Invector.vCharacterController
             }
 
             if (!isJumping) jumpTrigger = false;
+            
+            animator.SetBool(vAnimatorParameters.Grab, wantsToGrab);
+            if (wantsToGrab) {
+                wantsToGrab = false;
+            }
         }
 
         public virtual void SetAnimatorMoveSpeed(vMovementSpeed speed)
@@ -75,5 +80,6 @@ namespace Invector.vCharacterController
         public static int WantsGrab = Animator.StringToHash("WantsToGrab");
         public static int IsWalking = Animator.StringToHash("IsWalking");
         public static int Jump = Animator.StringToHash("Jump");
+        public static int Grab = Animator.StringToHash("Grab");
     }
 }

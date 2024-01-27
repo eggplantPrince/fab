@@ -10,6 +10,9 @@ public class SphereSpawn : MonoBehaviour
     private float minInterval;
     [SerializeField]
     private float maxInterval;
+    [SerializeField]
+    private float maxNumber;
+    private float counter = 0;
 
     public float spawnForce = 5f;
 
@@ -47,7 +50,8 @@ public class SphereSpawn : MonoBehaviour
 
         sphereComponent.SetSphereType(sphereTypes.typeList[Random.Range(0,sphereTypes.typeList.Length)]);
         sphereComponent.rb.AddForce(transform.right * (randomForce + spawnForce), ForceMode.Impulse);
-        StartCoroutine(SpawnTimer());
+        counter++;
+        if (counter < maxNumber) StartCoroutine(SpawnTimer());
     }
 
     void OnDisable() {

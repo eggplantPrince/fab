@@ -116,31 +116,32 @@ namespace Invector.vCharacterController
         internal void Grab()
         {
             isGrabbing = !isGrabbing;
+            wantsToGrab = true;
 
             if (isGrabbing)
             {
-                wantsToGrab = true;
                 Debug.Log("i grab");
                 RaycastHit hit;
                 int layerMask = 1 << 8;
                 Vector3 startPos = transform.position;
-                startPos.y += .5f;
+                startPos.y += 1f;
 
-                
-                if(Physics.SphereCast(startPos,1f, transform.forward, out hit,2f,layerMask))
+                if(Physics.SphereCast(startPos, 100f, transform.forward, out hit, 100f, layerMask))
                 {
+                    Debug.Log("got smth");
                     grabbedObject = hit.transform.gameObject.GetComponent<SphereComponent>();
                     Debug.Log(hit);
                     grabbedObject.GetGrabbed();
-                    grabbedObject.transform.position = holdTarget.position;
-                    grabbedObject.transform.parent = holdTarget.transform;
+                    Debug.Log(grabbedObject.transform.position);
+                    grabbedObject.transform.position = holdTarget.transform.position;
+                    Debug.Log(grabbedObject.transform.position);
+                    // grabbedObject.transform.parent = holdTarget.transform;
                 } else
                 {
                     isGrabbing = false;
                 }
             } else
             {
-                wantsToGrab = false;
                 grabbedObject.ReleaseGrab();
                 grabbedObject.transform.parent = null;
                 grabbedObject.rb.AddForce(transform.forward * throwForce, ForceMode.Impulse);
