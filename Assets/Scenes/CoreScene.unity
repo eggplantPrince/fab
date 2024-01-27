@@ -1554,7 +1554,7 @@ MonoBehaviour:
   sphere: {fileID: 6075888716663405381, guid: fbcfece1ff74c4ed6a3677e9235897cd, type: 3}
   minInterval: 0.1
   maxInterval: 4
-  maxNumber: 1
+  maxNumber: 0
   spawnForce: 0
   minRandomForce: -3
   maxRandomForce: 3

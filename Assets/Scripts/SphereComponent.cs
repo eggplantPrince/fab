@@ -10,9 +10,7 @@ public class SphereComponent : MonoBehaviour {
 
 
     void Start() {
-        if (type != null) {
-            SetSphereType(type);
-        }
+        
     }
 
     public void SetSphereType(SphereTypeEntry type) {

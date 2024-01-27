@@ -126,16 +126,15 @@ namespace Invector.vCharacterController
                 Vector3 startPos = transform.position;
                 startPos.y += 1f;
 
-                if(Physics.SphereCast(startPos, 100f, transform.forward, out hit, 100f, layerMask))
+                if(Physics.SphereCast(startPos, 1f, transform.forward, out hit, 1f, layerMask))
                 {
                     Debug.Log("got smth");
                     grabbedObject = hit.transform.gameObject.GetComponent<SphereComponent>();
-                    Debug.Log(hit);
                     grabbedObject.GetGrabbed();
-                    Debug.Log(grabbedObject.transform.position);
-                    grabbedObject.transform.position = holdTarget.transform.position;
-                    Debug.Log(grabbedObject.transform.position);
-                    // grabbedObject.transform.parent = holdTarget.transform;
+                    Vector3 newPos = holdTarget.transform.position;
+                    newPos.y += .5f;
+                    grabbedObject.transform.position = newPos;
+                    grabbedObject.transform.parent = holdTarget.transform;
                 } else
                 {
                     isGrabbing = false;
