@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5158790141673382549}
-  coll: {fileID: 0}
+  coll: {fileID: 5446574820753306023}
   contentMeshRenderer: {fileID: 5254996855205001567}
   bubbleTintRenderer: {fileID: 6671344348451982340}
   type: {fileID: 0}
