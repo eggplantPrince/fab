@@ -69,6 +69,7 @@ namespace Invector.vCharacterController
 
         // movement bools
         internal bool isJumping;
+        internal bool jumpTrigger;
         internal bool isStrafing
         {
             get
@@ -103,13 +104,14 @@ namespace Invector.vCharacterController
         internal Vector3 input;                             // generate raw input for the controller
         internal Vector3 colliderCenter;                    // storage the center of the capsule collider info                
         internal Vector3 inputSmooth;                       // generate smooth input based on the inputSmooth value       
-        internal Vector3 moveDirection;                     // used to know the direction you're moving 
+        internal Vector3 moveDirection;                     // used to know the direction you're moving
+        internal bool isWalking;
 
         #endregion
 
         public void Init()
         {
-            animator = GetComponent<Animator>();
+            animator = GetComponentInChildren<Animator>();
             animator.updateMode = AnimatorUpdateMode.AnimatePhysics;
 
             // slides the character through walls and edges
