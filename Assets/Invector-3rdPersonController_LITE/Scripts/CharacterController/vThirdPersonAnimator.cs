@@ -33,6 +33,8 @@ namespace Invector.vCharacterController
             }
 
             animator.SetFloat(vAnimatorParameters.InputMagnitude, stopMove ? 0f : inputMagnitude, isStrafing ? strafeSpeed.animationSmooth : freeSpeed.animationSmooth, Time.deltaTime);
+            animator.SetBool(vAnimatorParameters.IsGrabbing, isGrabbing);
+            animator.SetBool(vAnimatorParameters.WantsGrab, wantsToGrab);
         }
 
         public virtual void SetAnimatorMoveSpeed(vMovementSpeed speed)
@@ -59,5 +61,7 @@ namespace Invector.vCharacterController
         public static int IsStrafing = Animator.StringToHash("IsStrafing");
         public static int IsSprinting = Animator.StringToHash("IsSprinting");
         public static int GroundDistance = Animator.StringToHash("GroundDistance");
+        public static int IsGrabbing = Animator.StringToHash("IsGrabbing");
+        public static int WantsGrab = Animator.StringToHash("WantsToGrab");
     }
 }

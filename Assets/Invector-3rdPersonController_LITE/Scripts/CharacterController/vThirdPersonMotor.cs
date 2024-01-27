@@ -83,6 +83,7 @@ namespace Invector.vCharacterController
         internal bool isGrounded { get; set; }
         internal bool isSprinting { get; set; }
         public bool stopMove { get; protected set; }
+        internal bool wantsToGrab { get; set;}
         internal bool isGrabbing { get; set;}
 
         internal float inputMagnitude;                      // sets the inputMagnitude to update the animations in the animator controller

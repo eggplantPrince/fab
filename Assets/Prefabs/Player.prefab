@@ -1994,8 +1994,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754231713412103502}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 340f99b8334a14c4a8a01dce6e1e5348, type: 3}
-  m_Controller: {fileID: 9100000, guid: cbd1db45c75e5b948a5befe9ecb80421, type: 2}
+  m_Avatar: {fileID: 9000000, guid: a8be4db5759594a778debb3b12728faf, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4bba62fe41159497c9f6b4269c314d98, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -3618,22 +3618,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a8be4db5759594a778debb3b12728faf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0000001872535
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a8be4db5759594a778debb3b12728faf,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a8be4db5759594a778debb3b12728faf,
-        type: 3}
-      propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8be4db5759594a778debb3b12728faf,
         type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8be4db5759594a778debb3b12728faf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8be4db5759594a778debb3b12728faf,
+        type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8be4db5759594a778debb3b12728faf,
         type: 3}
@@ -3665,7 +3665,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: little-guy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5866666021909216657, guid: a8be4db5759594a778debb3b12728faf,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4bba62fe41159497c9f6b4269c314d98, type: 2}
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: a8be4db5759594a778debb3b12728faf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

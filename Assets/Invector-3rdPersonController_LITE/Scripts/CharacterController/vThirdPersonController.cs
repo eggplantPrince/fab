@@ -119,6 +119,7 @@ namespace Invector.vCharacterController
 
             if (isGrabbing)
             {
+                wantsToGrab = true;
                 Debug.Log("i grab");
                 RaycastHit hit;
                 int layerMask = 1 << 8;
@@ -137,22 +138,13 @@ namespace Invector.vCharacterController
                 {
                     isGrabbing = false;
                 }
-
-                
             } else
             {
+                wantsToGrab = false;
                 grabbedObject.ReleaseGrab();
                 grabbedObject.transform.parent = null;
                 grabbedObject.rb.AddForce(transform.forward * throwForce, ForceMode.Impulse);
             }
-        }
-
-        private void OnDrawGizmos()
-        {
-            //if (isGrabbing)
-            //{
-                Gizmos.DrawSphere(transform.position + transform.forward,1f);
-            //}
         }
 
         public virtual void Strafe()
