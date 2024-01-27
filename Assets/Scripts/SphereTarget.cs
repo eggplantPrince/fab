@@ -11,6 +11,8 @@ public class SphereTarget : MonoBehaviour {
 
     private GameControllerBehaviour gameController;
 
+    public GameObject submitVFXObject;
+
     void OnTriggerEnter(Collider other) {
         SphereComponent sphere = other.GetComponent<SphereComponent>();
         if (sphere != null) {
@@ -20,10 +22,6 @@ public class SphereTarget : MonoBehaviour {
 
     void OnTriggerExit(Collider other) {
         SphereComponent sphere = other.GetComponent<SphereComponent>();
-        if (sphere != null) {
-            spheres.Add(sphere);
-        }
-
         if (spheres.Contains(sphere))
             spheres.Remove(sphere);
     }
@@ -37,12 +35,13 @@ public class SphereTarget : MonoBehaviour {
     private IEnumerator DeliverTimer() {
         float duration = Random.Range(minInterval, maxInterval);
         yield return new WaitForSeconds(duration);
-        Deliver();
+        StartCoroutine(Deliver());
         StartCoroutine(DeliverTimer());
     }
 
-    void Deliver() {
-        Debug.Log(spheres);
+    private IEnumerator Deliver() {
+        submitVFXObject.GetComponent<Animator>().SetTrigger("Submit");
+        yield return new WaitForSeconds(0.5f);
         foreach (SphereComponent sphere in spheres){
             gameController.RateSphere(sphere);
             Destroy(sphere.gameObject);
