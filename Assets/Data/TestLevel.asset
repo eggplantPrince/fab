@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e9f8d1385834990ad7f97ecdb18d60, type: 3}
+  m_Name: TestLevel
+  m_EditorClassIdentifier: 
+  startingEntertainment: 50
+  likes:
+  - {fileID: 11400000, guid: 498a7ceb0db1547d08975ff481a7ffaf, type: 2}
+  - {fileID: 11400000, guid: 059ec720f1a624acca1cc4c3166edd97, type: 2}
+  hates:
+  - {fileID: 11400000, guid: cd03db4ce65c74e9eae0ea7f5fa0174c, type: 2}

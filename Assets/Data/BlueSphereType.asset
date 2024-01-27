@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f22f37f63bcec14080b11ce5e381ce6, type: 3}
-  m_Name: vEditorStartupPrefs
-  m_EditorClassIdentifier: 
-  displayWelcomeScreen: 0
+  m_Script: {fileID: 0}
+  m_Name: BlueSphereType
+  m_EditorClassIdentifier: Assembly-CSharp::SphereTypeEntry
+  typeName: blue
+  material: {fileID: 2100000, guid: 69b11e2c69c13477aa280fc96660832d, type: 2}
