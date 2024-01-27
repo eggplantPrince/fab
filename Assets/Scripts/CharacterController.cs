@@ -461,7 +461,7 @@ public class CharacterController : MonoBehaviour, ICharacterController
                     if (_isGrabbing && _shouldBeGrabbing)
                     {
                         Debug.Log("im grabbing now");
-                        Debug.DrawRay(transform.position,transform.forward *,Color.yellow);
+                        Debug.DrawRay(transform.position,transform.forward * 10f,Color.yellow);
                     } else if(_isGrabbing)
                     {
                         Debug.Log("im letting go");
