@@ -7,17 +7,17 @@ public class SphereTarget : MonoBehaviour {
     private float minInterval;
     [SerializeField]
     private float maxInterval;
-    private List<Sphere> spheres = new List<Sphere>();
+    private List<SphereComponent> spheres = new List<SphereComponent>();
 
     void OnTriggerEnter(Collider other) {
-        Sphere sphere = other.GetComponent<Sphere>();
+        SphereComponent sphere = other.GetComponent<SphereComponent>();
         if (sphere != null) {
             spheres.Add(sphere);
         }
     }
 
     void OnTriggerExit(Collider other) {
-        Sphere sphere = other.GetComponent<Sphere>();
+        SphereComponent sphere = other.GetComponent<SphereComponent>();
         if (sphere != null) {
             spheres.Add(sphere);
         }
@@ -40,7 +40,7 @@ public class SphereTarget : MonoBehaviour {
 
     void Deliver() {
         Debug.Log(spheres);
-        foreach (Sphere sphere in spheres) Destroy(sphere.gameObject);
+        foreach (SphereComponent sphere in spheres) Destroy(sphere.gameObject);
         spheres.Clear();
     }
 
