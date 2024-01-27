@@ -37,7 +37,7 @@ namespace Invector.vCharacterController
 
             animator.SetFloat(vAnimatorParameters.InputMagnitude, stopMove ? 0f : inputMagnitude, isStrafing ? strafeSpeed.animationSmooth : freeSpeed.animationSmooth, Time.deltaTime);
             animator.SetBool(vAnimatorParameters.IsGrabbing, isGrabbing);
-            animator.SetBool(vAnimatorParameters.WantsGrab, wantsToGrab);
+            animator.SetBool(vAnimatorParameters.WantsToGrab, wantsToGrab);
             animator.SetBool(vAnimatorParameters.IsWalking, isWalking);
             if (isJumping && !jumpTrigger) {
                 jumpTrigger = true;
@@ -45,11 +45,7 @@ namespace Invector.vCharacterController
             }
 
             if (!isJumping) jumpTrigger = false;
-            
-            animator.SetBool(vAnimatorParameters.Grab, wantsToGrab);
-            if (wantsToGrab) {
-                wantsToGrab = false;
-            }
+
         }
 
         public virtual void SetAnimatorMoveSpeed(vMovementSpeed speed)
@@ -77,7 +73,7 @@ namespace Invector.vCharacterController
         public static int IsSprinting = Animator.StringToHash("IsSprinting");
         public static int GroundDistance = Animator.StringToHash("GroundDistance");
         public static int IsGrabbing = Animator.StringToHash("IsGrabbing");
-        public static int WantsGrab = Animator.StringToHash("WantsToGrab");
+        public static int WantsToGrab = Animator.StringToHash("WantsToGrab");
         public static int IsWalking = Animator.StringToHash("IsWalking");
         public static int Jump = Animator.StringToHash("Jump");
         public static int Grab = Animator.StringToHash("Grab");

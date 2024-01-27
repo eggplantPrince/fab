@@ -147,6 +147,10 @@ namespace Invector.vCharacterController
             }
         }
 
+        public void PickedUp(){
+            wantsToGrab = false;
+        }
+
         public virtual void Strafe()
         {
             isStrafing = !isStrafing;
