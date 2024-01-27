@@ -9,6 +9,8 @@ public class SphereTarget : MonoBehaviour {
     private float maxInterval;
     private List<SphereComponent> spheres = new List<SphereComponent>();
 
+    private GameControllerBehaviour gameController;
+
     void OnTriggerEnter(Collider other) {
         SphereComponent sphere = other.GetComponent<SphereComponent>();
         if (sphere != null) {
@@ -28,6 +30,7 @@ public class SphereTarget : MonoBehaviour {
 
 
     void Start() {
+        gameController = FindObjectOfType<GameControllerBehaviour>();
         StartCoroutine(DeliverTimer());
     }
 
@@ -40,7 +43,10 @@ public class SphereTarget : MonoBehaviour {
 
     void Deliver() {
         Debug.Log(spheres);
-        foreach (SphereComponent sphere in spheres) Destroy(sphere.gameObject);
+        foreach (SphereComponent sphere in spheres){
+            gameController.RateSphere(sphere);
+            Destroy(sphere.gameObject);
+        }
         spheres.Clear();
     }
 

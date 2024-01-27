@@ -19,9 +19,22 @@ public class SphereSpawn : MonoBehaviour
 
     public SphereTypesMap sphereTypes;
 
-    void Start() {
-        StartCoroutine(SpawnTimer());
+    private Coroutine spawnCoroutine;
 
+    void Start() {
+        GameControllerBehaviour gc = FindObjectOfType<GameControllerBehaviour>();
+        gc.onGameStart+= OnGameStart;
+        gc.onLevelLost+= OnGameStop;
+    }
+
+    void OnGameStart()
+    {
+        spawnCoroutine = StartCoroutine(SpawnTimer());
+    }
+
+    void OnGameStop()
+    {
+        StopAllCoroutines();
     }
 
     private IEnumerator SpawnTimer() {
@@ -38,6 +51,6 @@ public class SphereSpawn : MonoBehaviour
     }
 
     void OnDisable() {
-        StopAllCoroutines();
+        
     }
 }
