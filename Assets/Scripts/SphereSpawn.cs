@@ -54,7 +54,8 @@ public class SphereSpawn : MonoBehaviour
         sphereComponent.rb.AddForce(transform.right * (randomForce + spawnForce), ForceMode.Impulse);
         pickUpSphere.AddSphere(sphereComponent);
         counter++;
-        if (counter < maxNumber) StartCoroutine(SpawnTimer());
+        StartCoroutine(SpawnTimer());
+        //if (counter < maxNumber) 
     }
 
     void OnDisable() {

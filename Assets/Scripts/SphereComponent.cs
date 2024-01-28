@@ -23,15 +23,30 @@ public class SphereComponent : MonoBehaviour {
         bubbleTintRenderer.material.SetColor("_EmissionColor", tintColor);
     }
 
-    internal void GetGrabbed()
+    internal bool GetGrabbed()
     {
-        coll.enabled = false;
-        rb.isKinematic = true;
+        if(coll != null)
+        {
+            coll.enabled = false;
+        }
+        if(rb != null)
+        {
+            rb.isKinematic = true;
+        }
+
+        return coll != null && rb != null;
     }
 
-    internal void ReleaseGrab()
+    internal bool ReleaseGrab()
     {
-        coll.enabled = true;
-        rb.isKinematic= false;
+        if(coll != null)
+        {
+            coll.enabled = true;
+        }
+        if(rb != null)
+        {
+            rb.isKinematic= false;
+        }
+        return coll != null && rb != null;
     }
 }

@@ -129,20 +129,26 @@ namespace Invector.vCharacterController
                     Debug.Log("got smth");
                     grabbedObject = pickUpSphere.Grab();
                     Debug.Log($"sphere: {pickUpSphere.Grab()}");
-                    grabbedObject.GetGrabbed();
-                    Vector3 newPos = holdTarget.transform.position;
-                    newPos.y += .5f;
-                    grabbedObject.transform.position = newPos;
-                    grabbedObject.transform.parent = holdTarget.transform;
+                    if (grabbedObject.GetGrabbed())
+                    {
+                        Vector3 newPos = holdTarget.transform.position;
+                        newPos.y += .5f;
+                        grabbedObject.transform.position = newPos;
+                        grabbedObject.transform.parent = holdTarget.transform;
+                    } else
+                    {
+                        isGrabbing = false;
+                    }
                 } else
                 {
                     isGrabbing = false;
                 }
             } else
             {
-                grabbedObject.ReleaseGrab();
-                grabbedObject.transform.parent = null;
-                grabbedObject.rb.AddForce(transform.forward * throwForce, ForceMode.Impulse);
+                if(grabbedObject.ReleaseGrab()){
+                    grabbedObject.transform.parent = null;
+                    grabbedObject.rb.AddForce(transform.forward * throwForce, ForceMode.Impulse);
+                }
             }
         }
 
