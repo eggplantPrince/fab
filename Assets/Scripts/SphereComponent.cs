@@ -8,10 +8,7 @@ public class SphereComponent : MonoBehaviour {
 
     public SphereTypeEntry type;
 
-
-    void Start() {
-        
-    }
+    public bool currentlyGrabbed;
 
     public void SetSphereType(SphereTypeEntry type) {
         this.type = type;
@@ -34,6 +31,8 @@ public class SphereComponent : MonoBehaviour {
             rb.isKinematic = true;
         }
 
+        currentlyGrabbed = true;
+
         return coll != null && rb != null;
     }
 
@@ -47,6 +46,9 @@ public class SphereComponent : MonoBehaviour {
         {
             rb.isKinematic= false;
         }
+
+        currentlyGrabbed = false;
+
         return coll != null && rb != null;
     }
 }

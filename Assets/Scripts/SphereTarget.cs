@@ -26,7 +26,7 @@ public class SphereTarget : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other == null) return;
         SphereComponent sphere = other.GetComponent<SphereComponent>();
-        if (sphere != null) {
+        if (sphere != null && sphere.currentlyGrabbed == false) {
             spheres.Add(sphere);
         }
     }
