@@ -7,6 +7,10 @@ public class SphereTarget : MonoBehaviour {
     private float minInterval;
     [SerializeField]
     private float maxInterval;
+    [SerializeField]
+    private AudioSource beepSource;
+    [SerializeField]
+    private AudioSource wooshSource;
     private float remainingTime;
     private List<SphereComponent> spheres = new List<SphereComponent>();
 
@@ -62,6 +66,7 @@ public class SphereTarget : MonoBehaviour {
         }
         spheres.Clear();
 
+        wooshSource.Play();
         StopCoroutine(blink);
         warnVFXObject.SetActive(false);
     }
@@ -73,6 +78,7 @@ public class SphereTarget : MonoBehaviour {
     private IEnumerator Blink(float interval) {
         while (true) {
             warnVFXObject.SetActive(!warnVFXObject.activeSelf);
+            if (warnVFXObject.activeSelf) beepSource.Play();
             yield return new WaitForSeconds(interval);
         }
     }
