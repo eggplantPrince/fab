@@ -15,7 +15,6 @@ public class GameControllerBehaviour : MonoBehaviour
     public delegate void SphereEvent(SphereTypeEntry type);
     public GameEvent onGameStart;
     public GameEvent onLevelLost;
-    public GameEvent onLevelWon;
     public GameEvent onGameWon;
     public SphereEvent onLikedSphere;
     public SphereEvent onDislikedSphere;
@@ -50,13 +49,7 @@ public class GameControllerBehaviour : MonoBehaviour
                 progress.value += (progressModifier * 2);
                 onLikedSphere?.Invoke(sphere.type);
                 if(progress.value >= 1f)
-                    if(currentLevel == levels.Length - 1)
-                    {
                         onGameWon?.Invoke();
-                    } else
-                    {
-                        onLevelWon?.Invoke();
-                    }
                 break;
             }
         }
@@ -70,6 +63,15 @@ public class GameControllerBehaviour : MonoBehaviour
                 if(progress.value <= 0f)
                     onLevelLost?.Invoke();
                 break;
+            }
+        }
+
+        progress.value += progressModifier;
+        if(progress.value >= 1f)
+        {
+            if(currentLevel == levels.Length - 1)
+            {
+                onGameWon?.Invoke();
             }
         }
     }
