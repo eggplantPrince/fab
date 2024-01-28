@@ -2011,7 +2011,7 @@ MonoBehaviour:
     rotateWithCamera: 0
     walkSpeed: 5
     runningSpeed: 10
-    sprintSpeed: 18
+    sprintSpeed: 14
   strafeSpeed:
     movementSmooth: 6
     animationSmooth: 0.2
