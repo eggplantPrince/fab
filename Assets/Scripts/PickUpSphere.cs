@@ -70,8 +70,4 @@ public class PickUpSphere : MonoBehaviour {
         if (other.GetComponent<SphereComponent>() == null) return;
         colliderSpheres.Remove(other.GetComponent<SphereComponent>());
     }
-
-    void Update() {
-        Debug.Log($"colliderSpheres: {colliderSpheres.Count}");
-    }
 }
