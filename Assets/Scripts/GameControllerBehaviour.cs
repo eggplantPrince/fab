@@ -66,14 +66,14 @@ public class GameControllerBehaviour : MonoBehaviour
             }
         }
 
-        progress.value += progressModifier;
-        if(progress.value >= 1f)
-        {
-            if(currentLevel == levels.Length - 1)
-            {
-                onGameWon?.Invoke();
-            }
-        }
+        // progress.value += progressModifier;
+        // if(progress.value >= 1f)
+        // {
+        //     if(currentLevel == levels.Length - 1)
+        //     {
+        //         onGameWon?.Invoke();
+        //     }
+        // }
     }
 
 
