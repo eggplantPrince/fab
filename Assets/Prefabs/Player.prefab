@@ -2008,16 +2008,16 @@ MonoBehaviour:
     rotationSpeed: 16
     walkByDefault: 0
     rotateWithCamera: 0
-    walkSpeed: 3
-    runningSpeed: 3
-    sprintSpeed: 3
+    walkSpeed: 5
+    runningSpeed: 10
+    sprintSpeed: 18
   strafeSpeed:
     movementSmooth: 6
     animationSmooth: 0.2
     rotationSpeed: 16
     walkByDefault: 0
     rotateWithCamera: 1
-    walkSpeed: 2
+    walkSpeed: 50
     runningSpeed: 4
     sprintSpeed: 6
   jumpWithRigidbodyForce: 0
