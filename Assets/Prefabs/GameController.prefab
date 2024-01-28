@@ -444,7 +444,6 @@ MonoBehaviour:
   spawnForce: 0
   minRandomForce: -3
   maxRandomForce: 3
-  sphereTypes: {fileID: 11400000, guid: 38b23a870bcf24c919b62b240cf170ef, type: 2}
 --- !u!1 &2933059595451380565
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +758,6 @@ MonoBehaviour:
   spawnForce: 0
   minRandomForce: -3
   maxRandomForce: 3
-  sphereTypes: {fileID: 11400000, guid: 38b23a870bcf24c919b62b240cf170ef, type: 2}
 --- !u!1 &5151430551723680873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1180,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - {fileID: 11400000, guid: 8e27072c0e7924b8f9479da3a68d9b5c, type: 2}
+  - {fileID: 11400000, guid: df6f915a3cf7848a787dd18a445dca39, type: 2}
+  - {fileID: 11400000, guid: 7345b559ca6294a98aa841fa733be0c2, type: 2}
+  - {fileID: 11400000, guid: 3fbc48a7af6e64a3e8f57c3420f03d95, type: 2}
+  - {fileID: 11400000, guid: 718009fbcfd494ddda07e8daacd105c8, type: 2}
+  - {fileID: 11400000, guid: e0a145f7e5f2248fab10a680df0f06dd, type: 2}
   currentLevel: 0
   progress: {fileID: 271173833135522039}
   progressModifier: 0.05
@@ -1189,6 +1192,10 @@ MonoBehaviour:
   LostScreen: {fileID: 3257693785375867756}
   WonScreen: {fileID: 6464125161010171277}
   player: {fileID: 6047136726169135577}
+  sphereTypes: {fileID: 11400000, guid: 38b23a870bcf24c919b62b240cf170ef, type: 2}
+  sphereSpawns:
+  - {fileID: 2655047638338149714}
+  - {fileID: 6344267126163004451}
 --- !u!1 &6024506888030570437
 GameObject:
   m_ObjectHideFlags: 0

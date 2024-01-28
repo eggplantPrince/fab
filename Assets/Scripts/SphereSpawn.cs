@@ -22,9 +22,9 @@ public class SphereSpawn : MonoBehaviour
 
     public float maxRandomForce = 3f;
 
-    public SphereTypesMap sphereTypes;
-
     private Coroutine spawnCoroutine;
+
+    private List<SphereTypeEntry> currentTypes;
 
     void Start() {
         GameControllerBehaviour gc = FindObjectOfType<GameControllerBehaviour>();
@@ -50,7 +50,7 @@ public class SphereSpawn : MonoBehaviour
 
         SphereComponent sphereComponent = spawnedSphere.GetComponent<SphereComponent>();
 
-        sphereComponent.SetSphereType(sphereTypes.typeList[Random.Range(0,sphereTypes.typeList.Length)]);
+        sphereComponent.SetSphereType(currentTypes[Random.Range(0, currentTypes.Count)]);
         sphereComponent.rb.AddForce(transform.right * (randomForce + spawnForce), ForceMode.Impulse);
         pickUpSphere.AddSphere(sphereComponent);
         counter++;
@@ -60,5 +60,11 @@ public class SphereSpawn : MonoBehaviour
 
     void OnDisable() {
         
+    }
+
+    public void SetCurrentTypes(List<SphereTypeEntry> types) {
+        currentTypes = types;
+        foreach (SphereTypeEntry entry in currentTypes) Debug.Log(entry);
+        Debug.Log("--------");
     }
 }

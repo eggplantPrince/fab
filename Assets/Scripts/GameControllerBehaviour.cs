@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using JetBrains.Annotations;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,8 +27,12 @@ public class GameControllerBehaviour : MonoBehaviour
     public GameObject WonScreen;
 
     public GameObject player;
+    public SphereTypesMap sphereTypes;
 
     private Vector3 playerStartPosition;
+    private List<SphereTypeEntry> currentTypes = new List<SphereTypeEntry>();
+
+    public List<SphereSpawn> sphereSpawns;
 
     public void Start()
     {
@@ -78,6 +85,16 @@ public class GameControllerBehaviour : MonoBehaviour
         currentLevel = 0;
         progress.value = levels[0].startingEntertainment;
         MainMenu.SetActive(false);
+        currentLevel = Random.Range(0, levels.Length);
+        currentTypes.Clear();
+        currentTypes.AddRange(levels[currentLevel].likes);
+        currentTypes.AddRange(levels[currentLevel].hates);
+        List<SphereTypeEntry> remaining = new List<SphereTypeEntry>();
+        foreach (SphereTypeEntry type in sphereTypes.typeList)
+            if (!levels[currentLevel].likes.Contains(type) && !levels[currentLevel].hates.Contains(type)) remaining.Add(type);
+        remaining = remaining.OrderBy( x => Random.value ).ToList( );
+        currentTypes.AddRange(remaining.Take(3));
+        foreach (SphereSpawn sphereSpawn in sphereSpawns) sphereSpawn.SetCurrentTypes(currentTypes);
     }
 
 

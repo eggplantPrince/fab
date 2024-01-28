@@ -14,7 +14,6 @@ public class SphereSound : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision collision){
-        Debug.Log("play sound");
         if (collision.relativeVelocity.magnitude > 3 && mrenderer.isVisible) {
             audioSource.pitch = Random.Range(initPitch - 0.1f, initPitch + 0.1f);
             audioSource.Play();

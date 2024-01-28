@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e9f8d1385834990ad7f97ecdb18d60, type: 3}
+  m_Name: Level4
+  m_EditorClassIdentifier: 
+  startingEntertainment: 0.15
+  likes:
+  - {fileID: 11400000, guid: 5c529081b13e140efa89fc696cd2f1f4, type: 2}
+  - {fileID: 11400000, guid: 5b2175fda3282483caeff2db45746f6c, type: 2}
+  - {fileID: 11400000, guid: 48e97506747fa43709ba8c5bb04a59f6, type: 2}
+  hates:
+  - {fileID: 11400000, guid: 91eec321657f44e488a25a22f469f1f3, type: 2}
+  - {fileID: 11400000, guid: 4d251c37680e94d4f9f12f323a83f94a, type: 2}
+  - {fileID: 11400000, guid: 92bc3a083f36e40129b16d05ecd44d0c, type: 2}
