@@ -20,7 +20,13 @@ public class ValidationResultBehaviour : MonoBehaviour
         gc = FindObjectOfType<GameControllerBehaviour>();
         gc.onLikedSphere += ShowLikedSphereType;
         gc.onDislikedSphere+= ShowDislikedSphereType;
-        gc.onGameStart += GameInit;
+        GameInit();
+    }
+
+    private void OnDestroy()
+    {
+        gc.onLikedSphere -= ShowLikedSphereType;
+        gc.onDislikedSphere -= ShowDislikedSphereType;
     }
 
     void GameInit()

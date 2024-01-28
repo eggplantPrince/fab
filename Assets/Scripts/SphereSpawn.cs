@@ -58,8 +58,9 @@ public class SphereSpawn : MonoBehaviour
         //if (counter < maxNumber) 
     }
 
-    void OnDisable() {
-        
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 
     public void SetCurrentTypes(List<SphereTypeEntry> types) {

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameControllerBehaviour : MonoBehaviour
@@ -46,7 +47,7 @@ public class GameControllerBehaviour : MonoBehaviour
         {
             if(likedType == sphere.type)
             {
-                progress.value += progressModifier;
+                progress.value += (progressModifier * 2);
                 onLikedSphere?.Invoke(sphere.type);
                 if(progress.value >= 1f)
                     if(currentLevel == levels.Length - 1)
@@ -76,6 +77,8 @@ public class GameControllerBehaviour : MonoBehaviour
 
     public void StartGame()
     {
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+
         player.transform.position = playerStartPosition;
         player.GetComponentInChildren<Rigidbody>().isKinematic = false;
         onGameStart?.Invoke();
@@ -94,6 +97,16 @@ public class GameControllerBehaviour : MonoBehaviour
         foreach (SphereSpawn sphereSpawn in sphereSpawns) sphereSpawn.SetCurrentTypes(currentTypes);
     }
 
+
+    public void BackToMain()
+    {
+        SceneManager.UnloadSceneAsync(1);
+        player.GetComponentInChildren<Rigidbody>().isKinematic = true;
+        LostScreen.SetActive(false);
+        WonScreen.SetActive(false);
+        MainMenu.SetActive(true);
+
+    }
 
     private void ShowWinScreen()
     {

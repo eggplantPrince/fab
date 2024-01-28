@@ -20,4 +20,11 @@ public class HumanController : MonoBehaviour
     {
         animator.SetFloat("Entertainment",gc.progress.value);
     }
+
+
+    private void OnDestroy()
+    {
+        gc.onLikedSphere -= UpdateAnimation;
+        gc.onDislikedSphere -= UpdateAnimation;
+    }
 }
