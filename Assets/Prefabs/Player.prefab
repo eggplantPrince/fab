@@ -2038,7 +2038,7 @@ MonoBehaviour:
   holdTarget: {fileID: 1741419885451923811}
   grabbedObject: {fileID: 0}
   pickUpSphere: {fileID: 5544698328440903062}
-  throwForce: 5
+  throwForce: 10
 --- !u!114 &754231713412103499
 MonoBehaviour:
   m_ObjectHideFlags: 0

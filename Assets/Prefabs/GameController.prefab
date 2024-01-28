@@ -437,8 +437,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 6075888716663405381, guid: fbcfece1ff74c4ed6a3677e9235897cd, type: 3}
-  minInterval: 0.1
-  maxInterval: 4
+  minInterval: 4
+  maxInterval: 10
   maxNumber: 0
   pickUpSphere: {fileID: 2204646384272622030}
   spawnForce: 0
@@ -752,8 +752,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 6075888716663405381, guid: fbcfece1ff74c4ed6a3677e9235897cd, type: 3}
-  minInterval: 0.1
-  maxInterval: 4
+  minInterval: 4
+  maxInterval: 10
   maxNumber: 0
   pickUpSphere: {fileID: 2204646384272622030}
   spawnForce: 0
