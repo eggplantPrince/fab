@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeName: christianity
   material: {fileID: 2100000, guid: 3858aecf6163b4cf0a31b054b281909b, type: 2}
-  texture: {fileID: 2800000, guid: 997344a396b614bd184aae4077a22afc, type: 3}
+  texture: {fileID: 2800000, guid: 663ba8f18560347a0b60215b61512f4d, type: 3}
   tint: {r: 1, g: 1, b: 1, a: 0}
