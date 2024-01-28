@@ -1174,7 +1174,7 @@ MonoBehaviour:
   sphere: {fileID: 6075888716663405381, guid: fbcfece1ff74c4ed6a3677e9235897cd, type: 3}
   minInterval: 0.1
   maxInterval: 4
-  maxNumber: 0
+  maxNumber: 20
   pickUpSphere: {fileID: 6296827830312787805}
   spawnForce: 0
   minRandomForce: -3
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphere: {fileID: 6075888716663405381, guid: fbcfece1ff74c4ed6a3677e9235897cd, type: 3}
   minInterval: 0.1
-  maxInterval: 4
+  maxInterval: 10
   maxNumber: 0
   pickUpSphere: {fileID: 6296827830312787805}
   spawnForce: 0
