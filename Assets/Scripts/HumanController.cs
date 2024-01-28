@@ -16,7 +16,7 @@ public class HumanController : MonoBehaviour
     }
 
     
-    void UpdateAnimation()
+    void UpdateAnimation(SphereTypeEntry type)
     {
         animator.SetFloat("Entertainment",gc.progress.value);
     }
