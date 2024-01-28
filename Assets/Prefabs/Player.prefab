@@ -3630,6 +3630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8138217807999426033}
   - component: {fileID: 5544698328440903062}
+  - component: {fileID: 1103931585738457915}
   m_Layer: 0
   m_Name: FindTarget
   m_TagString: Untagged
@@ -3645,9 +3646,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8220980882003523457}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.0000001872535}
-  m_LocalPosition: {x: 0, y: 0.7699995, z: 1.1700001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0, y: 0.77, z: 1.5}
+  m_LocalScale: {x: 150, y: 100, z: 75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 754231713412103496}
@@ -3665,6 +3666,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 1.5
+--- !u!64 &1103931585738457915
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8220980882003523457}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 5ebe8fc9193bd40278d76f76147eefcb, type: 3}
 --- !u!1 &8231563173734156934
 GameObject:
   m_ObjectHideFlags: 0
