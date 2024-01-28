@@ -62,7 +62,10 @@ public class SphereTarget : MonoBehaviour {
         yield return new WaitForSeconds(0.7f);
         foreach (SphereComponent sphere in spheres){
             gameController.RateSphere(sphere);
-            Destroy(sphere.gameObject);
+            if(sphere != null)
+            {
+                Destroy(sphere.gameObject);
+            }
         }
         spheres.Clear();
 
@@ -72,6 +75,11 @@ public class SphereTarget : MonoBehaviour {
     }
 
     void OnDisable() {
+        StopAllCoroutines();
+    }
+
+    private void OnDestroy()
+    {
         StopAllCoroutines();
     }
 
